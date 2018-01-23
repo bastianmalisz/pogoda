@@ -11,6 +11,7 @@
 <body>
 
   <div class="komenda-info"></div>
+  <div class="komenda-slowo">by uruchomić, powiedz: <span>"aplikacja pogoda"</span></div>
 <div class="pogoda-info">
   <div class="pogoda-info-list">
     <div class="nazwa-miasta"></div>
@@ -180,6 +181,8 @@
                 // left:"200px",
                   });
           // animacja pojawiania sie elementow
+          document.querySelector('.komeda-slowo').style.animationName = "schowaj";
+          document.querySelector('.komenda-info').style.animationName = "schowaj";
            miastoDiv.style.animationName = "pojaw";
            temperaturaDiv.style.animationName = "pojaw";
            zachmurzenieDiv.style.animationName = "pojaw";
@@ -227,6 +230,51 @@
 
 
   <style>
+    .komenda-info{
+      position: fixed;
+      width: 70vw;
+      height: 50vh;
+      border: 1px solid black;
+      left: 15vw;
+      top: 25vh;
+      background: url(speak2.png);
+      background-repeat: no-repeat;
+      background-size: 25% 70%;
+      background-position-x: 50%;
+
+      animation-name: schowaj;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      
+      
+
+    }
+    .komenda-slowo{
+      position: relative;
+      top: 60vh;
+      width: 60vw;
+      height: 10vh;
+      border: 1px solid red;
+      margin: 0 auto;
+      font-size: 1.3em;
+      
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 0.2s;
+    }
+    .komenda-slowo > span{
+      background: rgba(17, 17, 17, 0.329);
+      font-size: 1.4em;
+      padding: 1px;
+      margin-top: 3px;
+      font-weight: 600;
+      text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.671);
+    }
+    @keyframes schowaj{
+      from{opacity:1}
+      to {opacity:0}
+
+    }
     html {
       font-size: 12px;
       display: flex;
