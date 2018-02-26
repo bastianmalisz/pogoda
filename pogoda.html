@@ -7,6 +7,7 @@
   src="jquery-3.3.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link rel="stylesheet" href="pogoda.css">
 </head>
 <body>
 
@@ -86,13 +87,7 @@
            const wschodDiv = document.querySelector(".wschod-godzina");
            const zachodDiv = document.querySelector(".zachod-godzina");
            
-
-           
-           
-           
-           
-
-            // ustawienie nazewnictwa zachmurzenia indeksy- 0: 0-20%(zachmurzenia), 1:21-40%, 2:41-60%, 3:61-80% 4:81-100%
+          // ustawienie nazewnictwa zachmurzenia indeksy- 0: 0-20%(zachmurzenia), 1:21-40%, 2:41-60%, 3:61-80% 4:81-100%
            var zachmurzenieNazwa = ["brak zachmurzenia","niskie zachmurzenie","średnie zachmurzenie","wysokie zachmurzenie","całkowite zachmurzenie"];
           let terazZachmurzenie="";
             if((zachmurzenie >= 0) && (zachmurzenie < 21)){terazZachmurzenie = zachmurzenieNazwa[0]}
@@ -199,328 +194,23 @@
         });  
   }
   
-
- 
-
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     recognition.interimResults = false;
-
-
     recognition.addEventListener('result', e =>{
         const transcript = Array.from(e.results)
           .map( result => result[0])
           .map( result => result.transcript)
           .join('')
-
           textContent = transcript;
-          
-  
-       
           if(transcript.includes('aplikacja pogoda')){
             pogoda();
-            
-            console.log(transcript);}
-        
-    });
+          }
+  });
     
     recognition.addEventListener('end', recognition.start);
     recognition.start();
 </script>
-
-
-  <style>
-    .komenda-info{
-      position: fixed;
-      width: 70vw;
-      height: 50vh;
-      
-      left: 15vw;
-      top: 25vh;
-      background: url(speak2.png);
-      background-repeat: no-repeat;
-      background-size: 25% 70%;
-      background-position-x: 50%;
-
-      
-      animation-duration: 0.5s;
-      animation-fill-mode: forwards;
-      
-      
-
-    }
-    .komenda-slowo{
-      position: relative;
-      top: 60vh;
-      width: 60vw;
-      height: 10vh;
-      
-      margin: 0 auto;
-      font-size: 1.3em;
-      
-      animation-duration: 0.5s;
-      animation-fill-mode: forwards;
-      animation-delay: 0.2s;
-    }
-    .komenda-slowo > span{
-      background: rgba(17, 17, 17, 0.329);
-      font-size: 1.4em;
-      padding: 1px;
-      margin-top: 3px;
-      font-weight: 600;
-      text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.671);
-    }
-    @keyframes schowaj{
-      from{opacity:1}
-      to {opacity:0}
-
-    }
-    html {
-      font-size: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .przed{
-      font-size: 0.85em;
-      color: rgba(165, 165, 165, 0.5);
-      text-shadow: 1px 0px 1px black;
-    }
-    .pogoda-info{
-      width: 90vw;
-      height: 80vh;
-      display: flex;
-      border: 2px dashed rgba(19, 107, 95, 0.384);
-      background: url(back3.jpg);
-      background-repeat: none;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .pogoda-info-list{
-      width: 40%;
-      height: 80%;
-      margin: 10px;
-      
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-
-    }
-    .ikona-godziny{
-      width: 40%;
-      height: 70%;
-      margin: 10px;
-      
-    }
-
-    body {
-      background:#fdfdfd;
-      font-family: 'helvetica neue';
-      font-weight: 200;
-      font-size: 20px;
-      font-family: 'Dosis', sans-serif;
-      text-align: center;
-    }
-
-    
-    .nazwa-miasta{
-      position: relative;
-      opacity:0;
-      left: -30%;
-      width: 80%;
-      height: 10%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 0;
-    }
-    @keyframes pojaw{
-      from{left: -30%;opacity: 0;}
-      to{left: 0; opacity: 1;}
-    }
-    .zachmurzenie{
-      width: 80%;
-      height: 10%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      margin-top: 3px;
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 0.9s;
-    }
-    .wilgotnosc{
-      width: 80%;
-      height: 10%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      margin-top: 3px;
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 1.2s;
-    }
-    .cisnienie{
-      width: 80%;
-      height: 10%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      margin-top: 3px;
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 1.5s;
-    }
-    .temperatura{
-      width: 80%;
-      height: 10%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      margin-top: 3px;
-      position: relative;
-      opacity:0;
-      left: -30%;
-     
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 0.6s;
-    }
-    .wiatr{
-      width: 90%;
-      height: 10%;
-      
-      margin-top: 3px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-
-      
-    }
-    .wiatr-icon{
-      width: 50%;
-      height: 100%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 1.8s;
-    }
-    .wiatr-info{
-      width: 50%;
-      height: 100%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 2.1s;
-    }
-    .ikona{
-      width: 90%;
-      height: 70%;
-      
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 2.5s;
-    }
-    .wschod-godzina{
-      width: 50%;
-      height: 10%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      margin: 0 auto;
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 2.8s;
-    }
-    .zachod-godzina{
-      top: 10px;
-      width: 50%;
-      height: 10%;
-      border: 10px solid rgba(0, 0, 0, 0.103);
-      margin: 0 auto;
-      position: relative;
-      opacity:0;
-      left: -30%;
-      
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 3.1s;
-    }
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Smartphony*/
-.body{
-  padding:0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.przed{
-  font-size: 0.67em;
-}
-.pogoda-info{
-  width: 100vw;
-  height: 100vh;
-}
-.pogoda-info-list{
-  font-size: 2.1em;
-  line-height: 3em;
-  color: rgba(173, 32, 32, 0.753);
-  font-weight: 600;
-  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.397);
-}
-.zachmurzenie{
-  
-  line-height: 1em;
-}
-.wschod-godzina, .zachod-godzina{
-  font-size: 2.1em;
-  line-height: 1em;
-  color: rgba(173, 32, 32, 0.753);
-  font-weight: 600;
-  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.397);
-}
-.ikona{
-  height: 40%;
-}
-.komenda-info{
-  background-size: 65% 50%;
-}
-.komenda-slowo{
-  top: 65vh;
-  font-size: 2.3em;
-}
-.komenda-slowo > span{
-  font-size: 2.2em;
-  letter-spacing: 2px;
-  line-height: 10vh;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.555);
-  
-  
-}
-}
-  </style>
 
 </body>
 </html>
