@@ -80,11 +80,11 @@
                 pressureNow = pressureNames[1]
              }
              if (pressure > 1006 && pressure <= 1050) {
-                pressure = pressureNames[2]
+                pressureNow = pressureNames[2]
              }
              console.log("");
              let textToRead1 = 'jesteś w mieście' + data.name + " " + "temperatura wynosi " + temperature + "stopni celsjusza." + "Występuje " + cloudsNow + "Natomiast wiatr wieje z prędkością: " + windSpeed + " metrów na sekundę. Wilgotność powietrza wynosi " + humidity + "%.";
-             let textToRead2 = 'Można dziś poczuć' + pressureName + " o wartości " + pressureNow + " hektopaskali. Dzien rozpoczął się o godzinie " + sunrise + " natomiast słońce zajdzie o godzinie " + sunset
+             let textToRead2 = 'Można dziś poczuć' + pressureNow + " o wartości " + pressure + " hektopaskali. Dzien rozpoczął się o godzinie " + sunrise + " natomiast słońce zajdzie o godzinie " + sunset
              const msgWeather1 = new SpeechSynthesisUtterance(textToRead1);
              const msgWeather2 = new SpeechSynthesisUtterance(textToRead2);
              msgWeather1.lang = 'pl-PL';
@@ -96,7 +96,7 @@
              temperatureDiv.innerHTML = "<span class='przed'>temperatura: </span>" + temperature + "&deg";
              cloudsDiv.innerHTML = "<span class='przed'>zachmurzenie: </span>" + cloudsNow;
              humidityDiv.innerHTML = "<span class='przed'>wilg. powietrza: </span>" + humidity + " %";
-             pressureDiv.innerHTML = "<span class='przed'>ciśnienie: </span>" + pressureNow + " hPa";
+             pressureDiv.innerHTML = "<span class='przed'>ciśnienie: </span>" + pressure + " hPa";
              windInfoDiv.innerHTML = "<span class='przed'>wiatr:</span>" + windSpeed + "m/s";
              sunriseDiv.innerHTML = "<i class='em em-sunny'></i><span class='przed'> o godzinie  </span>" + sunrise;
              sunsetDiv.innerHTML = "<i class='em em-sunrise'></i></i><span class='przed'> o godzinie  </span>" + sunset;
