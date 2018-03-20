@@ -1,4 +1,4 @@
-.komenda-info {
+.word-info{
   position: fixed;
   width: 70vw;
   height: 50vh;
@@ -12,7 +12,7 @@
   animation-fill-mode: forwards;
 }
 
-.komenda-slowo {
+.magic-word {
   position: relative;
   top: 60vh;
   width: 60vw;
@@ -24,7 +24,7 @@
   animation-delay: 0.2s;
 }
 
-.komenda-slowo>span {
+.magic-word>span {
   background: rgba(17, 17, 17, 0.329);
   font-size: 1.4em;
   padding: 1px;
@@ -55,7 +55,7 @@ html {
   text-shadow: 1px 0px 1px black;
 }
 
-.pogoda-info {
+.weather-info {
   width: 90vw;
   height: 80vh;
   display: flex;
@@ -68,7 +68,7 @@ html {
   align-items: center;
 }
 
-.pogoda-info-list {
+.weather-info-list {
   width: 40%;
   height: 80%;
   margin: 10px;
@@ -78,7 +78,7 @@ html {
   align-items: center;
 }
 
-.ikona-godziny {
+.hours-icon {
   width: 40%;
   height: 70%;
   margin: 10px;
@@ -93,7 +93,7 @@ body {
   text-align: center;
 }
 
-.nazwa-miasta {
+.city-name {
   position: relative;
   opacity: 0;
   left: -30%;
@@ -116,7 +116,7 @@ body {
   }
 }
 
-.zachmurzenie {
+.clouds {
   width: 80%;
   height: 10%;
   border: 10px solid rgba(0, 0, 0, 0.103);
@@ -129,7 +129,7 @@ body {
   animation-delay: 0.9s;
 }
 
-.wilgotnosc {
+.humidity {
   width: 80%;
   height: 10%;
   border: 10px solid rgba(0, 0, 0, 0.103);
@@ -142,7 +142,7 @@ body {
   animation-delay: 1.2s;
 }
 
-.cisnienie {
+.pressure {
   width: 80%;
   height: 10%;
   border: 10px solid rgba(0, 0, 0, 0.103);
@@ -155,7 +155,7 @@ body {
   animation-delay: 1.5s;
 }
 
-.temperatura {
+.temperature {
   width: 80%;
   height: 10%;
   border: 10px solid rgba(0, 0, 0, 0.103);
@@ -167,8 +167,7 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 0.6s;
 }
-
-.wiatr {
+.wind {
   width: 90%;
   height: 10%;
   margin-top: 3px;
@@ -177,7 +176,7 @@ body {
   justify-content: center;
 }
 
-.wiatr-icon {
+.wind-icon {
   width: 50%;
   height: 100%;
   border: 10px solid rgba(0, 0, 0, 0.103);
@@ -188,8 +187,7 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 1.8s;
 }
-
-.wiatr-info {
+.wind-info {
   width: 50%;
   height: 100%;
   border: 10px solid rgba(0, 0, 0, 0.103);
@@ -201,7 +199,7 @@ body {
   animation-delay: 2.1s;
 }
 
-.ikona {
+.icon {
   width: 90%;
   height: 70%;
   position: relative;
@@ -212,7 +210,7 @@ body {
   animation-delay: 2.5s;
 }
 
-.wschod-godzina {
+.sunrise {
   width: 50%;
   height: 10%;
   border: 10px solid rgba(0, 0, 0, 0.103);
@@ -225,7 +223,7 @@ body {
   animation-delay: 2.8s;
 }
 
-.zachod-godzina {
+.sunset {
   top: 10px;
   width: 50%;
   height: 10%;
@@ -249,22 +247,22 @@ body {
   .przed {
     font-size: 0.67em;
   }
-  .pogoda-info {
+  .weather-info {
     width: 100vw;
     height: 100vh;
   }
-  .pogoda-info-list {
+  .weather-info-list {
     font-size: 2.1em;
     line-height: 3em;
     color: rgba(173, 32, 32, 0.753);
     font-weight: 600;
     text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.397);
   }
-  .zachmurzenie {
+  .clouds {
     line-height: 1em;
   }
-  .wschod-godzina,
-  .zachod-godzina {
+  .sunrise,
+  .sunset {
     font-size: 2.1em;
     line-height: 1em;
     color: rgba(173, 32, 32, 0.753);
@@ -274,14 +272,14 @@ body {
   .ikona {
     height: 40%;
   }
-  .komenda-info {
+  .word-info {
     background-size: 65% 50%;
   }
-  .komenda-slowo {
+  .magic-word {
     top: 65vh;
     font-size: 2.3em;
   }
-  .komenda-slowo>span {
+  .magic-word>span {
     font-size: 2.2em;
     letter-spacing: 2px;
     line-height: 10vh;
