@@ -84,7 +84,7 @@
              }
              console.log("");
              let textToRead1 = 'jesteś w mieście' + data.name + " " + "temperatura wynosi " + temperature + "stopni celsjusza." + "Występuje " + cloudsNow + "Natomiast wiatr wieje z prędkością: " + windSpeed + " metrów na sekundę. Wilgotność powietrza wynosi " + humidity + "%.";
-             let textToRead2 = 'Można dziś poczuć' + pressureNow + " o wartości " + pressure + " hektopaskali. Dzien rozpoczął się o godzinie " + sunriseH + " natomiast słońce zajdzie o godzinie " + sunsetH
+             let textToRead2 = 'Można dziś poczuć' + pressureNow + " o wartości " + pressure + " hektopaskali. Dzien rozpoczął się o godzinie " + sunrise + " natomiast słońce zajdzie o godzinie " + sunset
              const msgWeather1 = new SpeechSynthesisUtterance(textToRead1);
              const msgWeather2 = new SpeechSynthesisUtterance(textToRead2);
              msgWeather1.lang = 'pl-PL';
