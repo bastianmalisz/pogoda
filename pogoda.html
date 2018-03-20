@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Wykrywanie glosu</title>
-  <script
-  src="jquery-3.3.1.min.js"></script>
+  <title>Pogoda app</title>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-  <link rel="stylesheet" href="pogoda.css">
+  <link rel="stylesheet" href="style/pogoda.css">
 </head>
+
 <body>
 
   <div class="komenda-info"></div>
-  <div class="komenda-slowo">by uruchomić, powiedz: <span>"aplikacja pogoda"</span></div>
-<div class="pogoda-info">
-  <div class="pogoda-info-list">
-    <div class="nazwa-miasta"></div>
-    <div class="temperatura"></div>
-    <div class = "zachmurzenie"></div>
-    <div class = "wilgotnosc"></div>
-    <div class = "cisnienie"></div>
-    <div class = "wiatr">
-      <div class="wiatr-info"></div>
-      <div class="wiatr-icon"></div>
+  <div class="komenda-slowo">by uruchomić, powiedz:
+    <span>"aplikacja pogoda"</span>
+  </div>
+  <div class="pogoda-info">
+    <div class="pogoda-info-list">
+      <div class="nazwa-miasta"></div>
+      <div class="temperatura"></div>
+      <div class="zachmurzenie"></div>
+      <div class="wilgotnosc"></div>
+      <div class="cisnienie"></div>
+      <div class="wiatr">
+        <div class="wiatr-info"></div>
+        <div class="wiatr-icon"></div>
+      </div>
+    </div>
+    <div class="ikona-godziny">
+      <div class="ikona"></div>
+      <div class="wschod-godzina"></div>
+      <div class="zachod-godzina"></div>
     </div>
   </div>
-  <div class="ikona-godziny">
-    <div class="ikona"></div>
-    <div class="wschod-godzina"></div>
-    <div class="zachod-godzina"></div>
-  </div>
-</div>
-<script url = "./scripts/scripts.js"></script>
+  <script url="/scripts/scripts.js"></script>
 
 
 </body>
+
 </html>
