@@ -1,4 +1,5 @@
- //zdobywanie info o lokalizacji, zeby pokazac mape z pogoda
+alert("dziala");
+//zdobywanie info o lokalizacji, zeby pokazac mape z pogoda
  function pogoda() {
      navigator.geolocation.getCurrentPosition(function (position, info) {
          const latLong = [];
