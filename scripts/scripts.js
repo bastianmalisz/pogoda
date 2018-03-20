@@ -25,12 +25,12 @@
              let sunrise = new Date(data.sys.sunrise * 1000);
              let hours = sunrise.getHours();
              let minutes = "0" + sunrise.getMinutes();
-             let sunrise = hours + ':' + minutes.substr(-2);
+             let sunriseH = hours + ':' + minutes.substr(-2);
              //zachod slonca
              let sunset = new Date(data.sys.sunset * 1000);
              let hoursz = sunset.getHours();
              let minutesz = "0" + sunset.getMinutes();
-             let sunset = hoursz + ':' + minutesz.substr(-2);
+             let sunsetH = hoursz + ':' + minutesz.substr(-2);
              //predkosc wiatru
              let windSpeed = data.wind.speed;
              // kierunek wiatru
@@ -84,7 +84,7 @@
              }
              console.log("");
              let textToRead1 = 'jesteś w mieście' + data.name + " " + "temperatura wynosi " + temperature + "stopni celsjusza." + "Występuje " + cloudsNow + "Natomiast wiatr wieje z prędkością: " + windSpeed + " metrów na sekundę. Wilgotność powietrza wynosi " + humidity + "%.";
-             let textToRead2 = 'Można dziś poczuć' + pressureNow + " o wartości " + pressure + " hektopaskali. Dzien rozpoczął się o godzinie " + sunrise + " natomiast słońce zajdzie o godzinie " + sunset
+             let textToRead2 = 'Można dziś poczuć' + pressureNow + " o wartości " + pressure + " hektopaskali. Dzien rozpoczął się o godzinie " + sunriseH + " natomiast słońce zajdzie o godzinie " + sunsetH
              const msgWeather1 = new SpeechSynthesisUtterance(textToRead1);
              const msgWeather2 = new SpeechSynthesisUtterance(textToRead2);
              msgWeather1.lang = 'pl-PL';
