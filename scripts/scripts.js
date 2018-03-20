@@ -96,7 +96,7 @@
              temperatureDiv.innerHTML = "<span class='przed'>temperatura: </span>" + temperature + "&deg";
              cloudsDiv.innerHTML = "<span class='przed'>zachmurzenie: </span>" + cloudsNow;
              humidityDiv.innerHTML = "<span class='przed'>wilg. powietrza: </span>" + humidity + " %";
-             pressureDiv.innerHTML = "<span class='przed'>ciśnienie: </span>" + pressure + " hPa";
+             pressureDiv.innerHTML = "<span class='przed'>ciśnienie: </span>" + pressureNow + " hPa";
              windInfoDiv.innerHTML = "<span class='przed'>wiatr:</span>" + windSpeed + "m/s";
              sunriseDiv.innerHTML = "<i class='em em-sunny'></i><span class='przed'> o godzinie  </span>" + sunrise;
              sunsetDiv.innerHTML = "<i class='em em-sunrise'></i></i><span class='przed'> o godzinie  </span>" + sunset;
