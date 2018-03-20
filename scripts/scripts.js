@@ -98,8 +98,8 @@
              humidityDiv.innerHTML = "<span class='przed'>wilg. powietrza: </span>" + humidity + " %";
              pressureDiv.innerHTML = "<span class='przed'>ciśnienie: </span>" + pressure + " hPa";
              windInfoDiv.innerHTML = "<span class='przed'>wiatr:</span>" + windSpeed + "m/s";
-             sunriseDiv.innerHTML = "<i class='em em-sunny'></i><span class='przed'> o godzinie  </span>" + sunrise;
-             sunsetDiv.innerHTML = "<i class='em em-sunrise'></i></i><span class='przed'> o godzinie  </span>" + sunset;
+             sunriseDiv.innerHTML = "<i class='em em-sunny'></i><span class='przed'> o godzinie  </span>" + sunriseH;
+             sunsetDiv.innerHTML = "<i class='em em-sunrise'></i></i><span class='przed'> o godzinie  </span>" + sunsetH;
              //  obrazy pogody
              const images = ["/pogoda/img/sunny.png", "/pogoda/img/cloudy.png", "/pogoda/img/partly-cloudy.png"];
              if (cloudsNow == "brak zachmurzenia") {
