@@ -1,4 +1,4 @@
-.word-info{
+.word-info {
   position: fixed;
   width: 70vw;
   height: 50vh;
@@ -167,6 +167,7 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 0.6s;
 }
+
 .wind {
   width: 90%;
   height: 10%;
@@ -187,6 +188,7 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 1.8s;
 }
+
 .wind-info {
   width: 50%;
   height: 100%;
