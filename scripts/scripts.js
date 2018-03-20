@@ -6,7 +6,7 @@ function weatherNow() {
         // const info;
         const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latLong[0]}&lon=${latLong[1]}&units=metric&APPID=1f08d3a7a4d09b2abb92db35a1c70794`
         $.getJSON(api, function (data) {
-            console.log(data, data.name)
+            
             const clouds = data.clouds.all;
             const humidity = data.main.humidity;
             const pressure = data.main.pressure;
