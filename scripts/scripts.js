@@ -108,7 +108,7 @@
                      backgroundSize: " contain",
                      backgroundRepeat: "no-repeat",
                      backgroundPosition: "center"
-                     // left:"200px",
+                     
                  });
              }
              if (terazZachmurzenie == "niskie zachmurzenie") {
@@ -117,7 +117,7 @@
                      backgroundSize: " contain",
                      backgroundRepeat: "no-repeat",
                      backgroundPosition: "center"
-                     // left:"200px",
+                     
                  });
              }
              if (terazZachmurzenie == "średnie zachmurzenie") {
@@ -126,7 +126,7 @@
                      backgroundSize: " contain",
                      backgroundRepeat: "no-repeat",
                      backgroundPosition: "center"
-                     // left:"200px",
+                     
                  });
              }
              if (terazZachmurzenie == "wysokie zachmurzenie") {
@@ -135,7 +135,7 @@
                      backgroundSize: " contain",
                      backgroundRepeat: "no-repeat",
                      backgroundPosition: "center"
-                     // left:"200px",
+                     
                  });
              }
              if (terazZachmurzenie == "całkowite zachmurzenie") {
@@ -144,7 +144,7 @@
                      backgroundSize: " contain",
                      backgroundRepeat: "no-repeat",
                      backgroundPosition: "center"
-                     // left:"200px",
+                     
                  });
              }
              kierunekWiatru
@@ -154,7 +154,7 @@
                  backgroundRepeat: "no-repeat",
                  backgroundPosition: "center",
                  transform: `translate(${kierunekWiatru}deg)`
-                 // left:"200px",
+                
              });
              // animacja pojawiania sie elementow
              document.querySelector('.komenda-slowo').style.animationName = "schowaj";
