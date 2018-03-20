@@ -34,7 +34,7 @@ function weatherNow() {
             const sunriseDiv = document.querySelector(".sunrise");
             const sunsetDiv = document.querySelector(".sunset");
             const cloudsNames = ["brak zachmurzenia", "niskie zachmurzenie", "średnie zachmurzenie", "wysokie zachmurzenie", "całkowite zachmurzenie"];
-            const cloudsNow = "";
+            let cloudsNow = "";
             if ((clouds >= 0) && (clouds < 21)) {
                 cloudsNow = cloudsNames[0]
             }
