@@ -62,10 +62,10 @@ function weatherNow() {
             if (pressure > 1006 && pressure <= 1050) {
                 pressureNow = pressureNames[2]
             }
-            const textToRead1 = 'jesteś w mieście' + data.name + " " + "temperatura wynosi " + temperature + "stopni celsjusza." + "Występuje " + cloudsNow + "Natomiast wiatr wieje z prędkością: " + windSpeed + " metrów na sekundę. Wilgotność powietrza wynosi " + humidity + "%.";
-            const textToRead2 = 'Można dziś poczuć' + pressureNow + " o wartości " + pressure + " hektopaskali. Dzien rozpoczął się o godzinie " + sunriseH + " natomiast słońce zajdzie o godzinie " + sunsetH
-            const msgWeather1 = new SpeechSynthesisUtterance(textToRead1);
-            const msgWeather2 = new SpeechSynthesisUtterance(textToRead2);
+            let textToRead1 = 'jesteś w mieście' + data.name + " " + "temperatura wynosi " + temperature + "stopni celsjusza." + "Występuje " + cloudsNow + "Natomiast wiatr wieje z prędkością: " + windSpeed + " metrów na sekundę. Wilgotność powietrza wynosi " + humidity + "%.";
+            let textToRead2 = 'Można dziś poczuć' + pressureNow + " o wartości " + pressure + " hektopaskali. Dzien rozpoczął się o godzinie " + sunriseH + " natomiast słońce zajdzie o godzinie " + sunsetH
+            let msgWeather1 = new SpeechSynthesisUtterance(textToRead1);
+            let msgWeather2 = new SpeechSynthesisUtterance(textToRead2);
             msgWeather1.lang = 'pl-PL';
             msgWeather2.lang = 'pl-PL';
             window.speechSynthesis.speak(msgWeather1);
